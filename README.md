@@ -5,16 +5,23 @@
  
  
 ### Table of Content
-1. [Project Context - User Story](#context)
-2. [ Project Objectives ](#objectives)
-3. [ Outcome ](#Outcome)
-4. [ Project Links ](#Links)
-5. [ Screenshots ](#Screenshots)
-6. [Pseudocode - Logic Steps](#Pseudocode)
-7. [ Installation](#Installation)
-8. [ Credits](#Credits)
-9. [What I've Learned](#learned)
-10. [ License ](#License)
+- [daily-planner](#daily-planner)
+    - [Table of Content](#table-of-content)
+    - [1. Project Context - User Story](#1-project-context---user-story)
+    - [2. Project Objectives](#2-project-objectives)
+    - [3. Outcome](#3-outcome)
+    - [4. Links](#4-links)
+      - [Link to Website](#link-to-website)
+      - [Link to Files](#link-to-files)
+    - [5. Screenshots](#5-screenshots)
+      - [Screenshots - Mobile View](#screenshots---mobile-view)
+      - [Screenshots - Laptop view](#screenshots---laptop-view)
+    - [6. Pseudocode - Logic Steps](#6-pseudocode---logic-steps)
+    - [7. Installation](#7-installation)
+    - [8. Credits:](#8-credits)
+    - [9. What I've Learned](#9-what-ive-learned)
+    - [10. License](#10-license)
+        - [MIT License](#mit-license)
 #
 
 
@@ -48,6 +55,8 @@
 <a name="Screenshots"></a>
 ### 5. Screenshots 
 
+<kbd>![screenshot-mobile](./assets/images/../../Assets/images/05-third-party-apis-homework-demo.gif)</kbd>
+
 #### Screenshots - Mobile View
 <kbd>![screenshot-mobile](./assets/images/m1.png)</kbd>
 
@@ -56,16 +65,13 @@
 
 <a name = "Pseudocode"></a>
 ### 6. Pseudocode - Logic Steps
-* After the 'click' event, the users will be prompted to enter the password length. 
-* Need a variable that holds the users input. 
-* Check if the users input is a number between 8 and 128. 
-* If not(such as letters, null, space, symbols, or numbers out of range), keep prompting until the input is as desired. 
-* Ask users whether they would like their passwords to contain numbers, uppercase letters, lowercase letters and symbols. 
-* Create a variable to hold each answer. 
-* If users select no to all questions, then ask these questions again. 
-* Collect user preference and assign to a variable.
-* Generate random password characters.
-* Create a variable that holds the sum of those random characters. 
+1. Users will see the current date and day when opening the work-day schedule 
+1. See the time blocks before deciding where to enter to-dos 
+1. Enter the to-dos in user-input area
+1. User input will be automatically colorized as past, present, or future events
+1. Save the user inputs 
+1. Input can be erased or cleared 
+
 
 <a name="Installation"></a>
 ### 7. Installation
@@ -82,10 +88,17 @@
 ### 8. Credits:
  The following materials contribute to the completion of this project. 
 
-* [Password Special characters - www.owasp.org](https://owasp.org/www-community/password-special-characters)
-* [Random password generator - www.wikipedia.org](https://en.wikipedia.org/wiki/Random_password_generator)
-* [How To Create A Strong Password - www.pcmag.com](https://www.pcmag.com/how-to/how-to-create-a-random-password-generator)
+[HTML5]
+[CSS3]
+[Bootstrap4]
+[JavaScript]
+[JQuey]
+[moment.js]
+[Google Fonts]
+[Font Awesome]
+[Visual Studio Code] 
 
+[Youtube - Moment.js Tutorial]( https://www.youtube.com/watch?v=n80RRNS1k64&list=PLVvjrrRCBy2LWFkR7opQxWp4z0en6OHgw)
 
 <a name="learned"></a>
 ### 9. What I've Learned
