@@ -20,63 +20,63 @@ $(document).ready(function() {
 			hour: '09',
 			time: '9',
 			meridiem: 'AM',
-			event: ''
+			plan: ''
 		},
 		{
 			id: '1',
 			hour: '10',
 			time: '10',
 			meridiem: 'AM',
-			event: ''
+			plan: ''
 		},
 		{
 			id: '2',
 			hour: '11',
 			time: '11',
 			meridiem: 'AM',
-			event: ''
+			plan: ''
 		},
 		{
 			id: '3',
 			hour: '12',
 			time: '12',
 			meridiem: 'PM',
-			event: ''
+			plan: ''
 		},
 		{
 			id: '4',
 			hour: '01',
 			time: '13',
 			meridiem: 'PM',
-			event: ''
+			plan: ''
 		},
 		{
 			id: '5',
 			hour: '02',
 			time: '14',
 			meridiem: 'PM',
-			event: ''
+			plan: ''
 		},
 		{
 			id: '6',
 			hour: '03',
 			time: '15',
 			meridiem: 'PM',
-			event: ''
+			plan: ''
 		},
 		{
 			id: '7',
 			hour: '04',
 			time: '16',
 			meridiem: 'PM',
-			event: ''
+			plan: ''
 		},
 		{
 			id: '8',
 			hour: '05',
 			time: '17',
 			meridiem: 'PM',
-			event: ''
+			plan: ''
 		}
 	];
 
@@ -88,6 +88,7 @@ $(document).ready(function() {
 		console.log(workHour.hour);
 		console.log(workHour.time);
 		console.log(workHour.meridiem);
+		console.log(workHour.plan);
 
 		//For each workHour, create a newRow
 		let newRow = $('<form>').addClass('row time-block');
@@ -102,10 +103,22 @@ $(document).ready(function() {
 
 		// Add hourText to hourEl
 		let hourText = hourEl.text(`${workHour.hour}:00 ${workHour.meridiem} `);
-		console.log(hourText);
 
 		//Append hourEl to newRow
 		newRow.append(hourEl);
+
+		//Create texarea
+		let textEl = $('<textarea>').attr({
+			class: 'col-8 col-lg-10 description past',
+			id: workHour.id
+		});
+
+		workHour.plan = $('textarea').val();
+
+		//Append textareas
+            newRow.append(textEl);
+            
+            
 	});
 
 	// .time-block .row  <form>, append .container div
