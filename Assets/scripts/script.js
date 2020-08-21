@@ -104,9 +104,6 @@ $(document).ready(function() {
 		// Add hourText to hourEl
 		let hourText = hourEl.text(`${workHour.hour}:00 ${workHour.meridiem} `);
 
-		//Append hourEl to newRow
-		newRow.append(hourEl);
-
 		//Create texarea
 		let textEl = $('<textarea>').attr({
 			class: 'col-8 col-lg-10 description past',
@@ -117,23 +114,18 @@ $(document).ready(function() {
 		workHour.plan = textEl.val();
 		console.log(textEl.val());
 
-		//Append textareas
-		newRow.append(textEl);
-
 		// Create save buttons
 		let buttonEl = $('<button>').addClass('saveBtn col-2 col-lg-1');
-
-		//Append buttons
-		newRow.append(buttonEl);
 
 		// Create save icons
 		let iconEl = $('<i>').addClass('fa fa-save fa-lg');
 
 		//Append icons
 		buttonEl.append(iconEl);
-      });
-      
-      
+
+            //Append all three children to newRow
+		newRow.append(hourEl, textEl, buttonEl);
+	});
 
 	// .time-block .row  <form>, append .container div
 	// .hour .col-2 .col-lg-1 <div>
