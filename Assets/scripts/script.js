@@ -113,13 +113,27 @@ $(document).ready(function() {
 			id: workHour.id
 		});
 
-		workHour.plan = $('textarea').val();
+		//Get textarea input
+		workHour.plan = textEl.val();
+		console.log(textEl.val());
 
 		//Append textareas
-            newRow.append(textEl);
-            
-            
-	});
+		newRow.append(textEl);
+
+		// Create save buttons
+		let buttonEl = $('<button>').addClass('saveBtn col-2 col-lg-1');
+
+		//Append buttons
+		newRow.append(buttonEl);
+
+		// Create save icons
+		let iconEl = $('<i>').addClass('fa fa-save fa-lg');
+
+		//Append icons
+		buttonEl.append(iconEl);
+      });
+      
+      
 
 	// .time-block .row  <form>, append .container div
 	// .hour .col-2 .col-lg-1 <div>
