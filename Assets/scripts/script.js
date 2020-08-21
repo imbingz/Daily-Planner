@@ -5,12 +5,9 @@ $(document).ready(function() {
 	function headerDate() {
 		let m = moment();
 		$('#currentDay').text(m.format('dddd, LL'));
-		console.log(typeof m.format('H'));
 	}
 
 	headerDate();
-
-	/* PLANNER MAIN BODY --------------------------------------------------------------------------------------------*/
 
 	// create an object for each time-block and put them into an array variable to loop through
 
@@ -80,7 +77,7 @@ $(document).ready(function() {
 		}
 	];
 
-	// create planner body
+	/* PLANNER  --------------------------------------------------------------------------------------------*/
 
 	$.each(workDay, function(index, workHour) {
 		console.log(index, workHour);
@@ -89,6 +86,8 @@ $(document).ready(function() {
 		console.log(workHour.time);
 		console.log(workHour.meridiem);
 		console.log(workHour.plan);
+
+		/* MAIN BODY LAYOUT  --------------------------------------------------------------------------------------------*/
 
 		//For each workHour, create a newRow
 		let newRow = $('<form>').addClass('row time-block');
@@ -106,7 +105,7 @@ $(document).ready(function() {
 
 		//Create texarea
 		let textEl = $('<textarea>').attr({
-			class: 'col-8 col-lg-10 description past',
+			class: 'col-8 col-lg-10 description',
 			id: workHour.id
 		});
 
@@ -123,23 +122,28 @@ $(document).ready(function() {
 		//Append icons
 		buttonEl.append(iconEl);
 
-            //Append all three children to newRow
+		//Append all three children to newRow
 		newRow.append(hourEl, textEl, buttonEl);
+
+		/* HOUR CHECK AND COLOR CHANGE --------------------------------------------------------------------------------------------*/
+
+		// check current hour (conditional statement) and add .past .present .future classes accordingly to each <textarea>
+
+		let currentHour = parseInt(moment().format('H'));
+		console.log(currentHour);
+
+		plannerHour = parseInt(workHour.time);
+
+		if (plannerHour < currentHour) {
+			console.log(plannerHour);
+			textEl.addClass('past');
+		} else if (plannerHour === currentHour) {
+			textEl.addClass('present');
+		} else {
+			textEl.addClass('future');
+		}
 	});
 
-	// .time-block .row  <form>, append .container div
-	// .hour .col-2 .col-lg-1 <div>
-	//.hour-text <span> 9:00AM
-	// append <span> to <div>
-	// Day plans - .description .col-8 .col-lg-10 id = " " <textarea>
-	// append <textarea> to <form>
-	// Create .saveBtn .col-2 .col-lg-1 <button> (saveButton)
-	// .fa .fa-save .fa-lg <i> (saveIcon)
-	//append <i> to <button>
-	// append <button> to <form>
-	// OR append all new tags to the form at once
-	// form. append(all above three )
-	// check current hour (conditional statement) and add .past .present .future classes accordingly to each <textarea>
 	// set and get data to n from localStorage
 	// get the textarea input value and save to localStorage
 	// add saveBtn 'click' event -->
