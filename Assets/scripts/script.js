@@ -77,6 +77,22 @@ $(document).ready(function() {
 		}
 	];
 
+	/* SET, GET AND DISPLAY ANY EXISTING DATA IN LOCALSTORAGE --------------------------------------------------------------------------------------------*/
+
+	function initialize() {
+		//Check if any data existing in localStorage
+		let storedDay = JSON.parse(localStorage.getItem('workDay'));
+
+		if (storedDay) {
+			workDay = storedDay;
+		}
+		//Store existing data to localStorage
+		savePlans();
+
+		//Display existing localStorage data
+		displayPlans();
+	}
+
 	/* PLANNER  --------------------------------------------------------------------------------------------*/
 
 	$.each(workDay, function(index, workHour) {
@@ -97,7 +113,7 @@ $(document).ready(function() {
 		//Create .hour <div>
 		let hourEl = $('<div>').attr({
 			class: 'hour col-2 col-lg-1',
-			'data-hour': workHour.hour
+			'data-hour': workHour.time
 		});
 
 		// Add hourText to hourEl
@@ -110,7 +126,7 @@ $(document).ready(function() {
 		});
 
 		//Get textarea input
-		workHour.plan = textEl.val();
+		workHour.plan = textEl.val().trim();
 		console.log(textEl.val());
 
 		// Create save buttons
@@ -127,7 +143,7 @@ $(document).ready(function() {
 
 		/* HOUR CHECK AND COLOR CHANGE --------------------------------------------------------------------------------------------*/
 
-		// check current hour (conditional statement) and add .past .present .future classes accordingly to each <textarea>
+		// check current hour and add .past .present .future classes accordingly to each <textarea>
 
 		let currentHour = parseInt(moment().format('H'));
 		console.log(currentHour);
@@ -137,6 +153,8 @@ $(document).ready(function() {
 		if (plannerHour < currentHour) {
 			console.log(plannerHour);
 			textEl.addClass('past');
+			// Disable input to past hours
+			// textEl.attr('disabled', true);
 		} else if (plannerHour === currentHour) {
 			textEl.addClass('present');
 		} else {
@@ -144,8 +162,38 @@ $(document).ready(function() {
 		}
 	});
 
-	// set and get data to n from localStorage
+	//Call the initialize func after planner loaded
+	initialize();
+
+	/* SAVE PLAN INPUTS --------------------------------------------------------------------------------------------*/
+
+	// Save plans in localStorage
+	function savePlans() {
+		localStorage.setItem('workDay', JSON.stringify(workDay));
+	}
+
+	//Display plans
+	function displayPlans() {
+		$.each(workDay, function(index, workHour) {
+			$(`#${workHour.id}`).val(`${workHour.plan} `);
+		});
+	}
+
+	//Add event listener to buttons
+	$('.saveBtn').on('click', function(event) {
+		console.log('button clicked');
+
+		//Prevent form submission and page reload
+		event.preventDefault();
+            
+            savePlans();
+		displayPlans();
+	});
+
 	// get the textarea input value and save to localStorage
+
+	// set and get data to n from localStorage
+
 	// add saveBtn 'click' event -->
 	//Save data to the local storage;
 	// Set data in localStorage
