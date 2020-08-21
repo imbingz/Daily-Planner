@@ -1,15 +1,88 @@
 $(document).ready(function() {
-	// create an object for each time-block and put them into an array variable to loop through
+	/* ADD CURRENT DATE --------------------------------------------------------------------------------------------*/
 
 	// Use moment.js format and attach/display the date to the header
+	function headerDate() {
+		let m = moment();
+		$('#currentDay').text(m.format('dddd, LL'));
+		console.log(typeof m.format('H'));
+	}
 
-	let m = moment();
-	$('#currentDay').text(m.format('dddd, MMMM DD, YYYY'));
+	headerDate();
+	/* PLANNER MAIN BODY --------------------------------------------------------------------------------------------*/
 
-	// Save data to the local storage
-	// Set data in localStorage
-	// Display any data in localStorage, if any
-	// create planner body
+	// create an object for each time-block and put them into an array variable to loop through
+
+	let workDay = [
+		{
+			id: '0',
+			hour: '09',
+			time: '9',
+			meridiem: 'AM',
+			event: ''
+		},
+		{
+			id: '1',
+			hour: '10',
+			time: '10',
+			meridiem: 'AM',
+			event: ''
+		},
+		{
+			id: '2',
+			hour: '11',
+			time: '11',
+			meridiem: 'AM',
+			event: ''
+		},
+		{
+			id: '3',
+			hour: '12',
+			time: '12',
+			meridiem: 'PM',
+			event: ''
+		},
+		{
+			id: '4',
+			hour: '01',
+			time: '13',
+			meridiem: 'PM',
+			event: ''
+		},
+		{
+			id: '5',
+			hour: '02',
+			time: '14',
+			meridiem: 'PM',
+			event: ''
+		},
+		{
+			id: '6',
+			hour: '03',
+			time: '15',
+			meridiem: 'PM',
+			event: ''
+		},
+		{
+			id: '7',
+			hour: '0',
+			time: '16',
+			meridiem: 'PM',
+			event: ''
+		},
+		{
+			id: '8',
+			hour: '05',
+			time: '17',
+			meridiem: 'PM',
+			event: ''
+		}
+	];
+
+      // create planner body
+      
+
+      
 	// .time-block .row  <form>, append .container div
 	// .hour .col-2 .col-lg-1 <div>
 	//.hour-text <span> 9:00AM
@@ -26,4 +99,7 @@ $(document).ready(function() {
 	// set and get data to n from localStorage
 	// get the textarea input value and save to localStorage
 	// add saveBtn 'click' event -->
+	//Save data to the local storage;
+	// Set data in localStorage
+	// Display any data in localStorage, if any
 });
