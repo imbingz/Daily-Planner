@@ -9,6 +9,7 @@ $(document).ready(function() {
 	}
 
 	headerDate();
+
 	/* PLANNER MAIN BODY --------------------------------------------------------------------------------------------*/
 
 	// create an object for each time-block and put them into an array variable to loop through
@@ -65,7 +66,7 @@ $(document).ready(function() {
 		},
 		{
 			id: '7',
-			hour: '0',
+			hour: '04',
 			time: '16',
 			meridiem: 'PM',
 			event: ''
@@ -79,10 +80,34 @@ $(document).ready(function() {
 		}
 	];
 
-      // create planner body
-      
+	// create planner body
 
-      
+	$.each(workDay, function(index, workHour) {
+		console.log(index, workHour);
+		console.log(workHour.id);
+		console.log(workHour.hour);
+		console.log(workHour.time);
+		console.log(workHour.meridiem);
+
+		//For each workHour, create a newRow
+		let newRow = $('<form>').addClass('row time-block');
+		//Append the newRow to .container <div>
+		$('.container').append(newRow);
+
+		//Create .hour <div>
+		let hourEl = $('<div>').attr({
+			class: 'hour col-2 col-lg-1',
+			'data-hour': workHour.hour
+		});
+
+		// Add hourText to hourEl
+		let hourText = hourEl.text(`${workHour.hour}:00 ${workHour.meridiem} `);
+		console.log(hourText);
+
+		//Append hourEl to newRow
+		newRow.append(hourEl);
+	});
+
 	// .time-block .row  <form>, append .container div
 	// .hour .col-2 .col-lg-1 <div>
 	//.hour-text <span> 9:00AM
