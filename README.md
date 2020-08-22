@@ -1,10 +1,4 @@
-# daily-planner
- https://imbingz.github.io/Daily-Planner/ 
- <br> <br>
- https://github.com/imbingz/Daily-Planner
- 
- 
- 
+# daily-planner 
 ### Table of Content
 - [daily-planner](#daily-planner)
     - [Table of Content](#table-of-content)
@@ -37,12 +31,13 @@
 ### 2. Project Objectives
 * Create a simple calendar application that allows the user to save events for each hour of the day.
 * This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-* It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.(I used the given HTML & CSS files)
+* It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.(I used the given HTML & CSS files with minimal custom styling)
 
 <a name = "Outcome"></a>
 ### 3. Outcome
 * The user interface is responsive to different devices - mobile, tablets, laptops and larger screen desktops
-* The app is dynamic and generates a random password based on user preference
+* The app dynamically takes in user input and store the day plan in the localStorage and display in the textarea
+
 
 <a name = "Links"></a>
 ### 4. Links 
@@ -89,21 +84,29 @@
 ### 8. Credits:
  The following materials contribute to the completion of this project. 
 
-[HTML5]
-[CSS3]
-[Bootstrap4]
-[JavaScript]
-[JQuey]
-[moment.js]
-[Google Fonts]
-[Font Awesome]
-[Visual Studio Code] 
+[Mozilla HTML5 Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+[w3 School CSS3](https://www.w3schools.com/css/css_intro.asp)
+[Bootstrap4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+[Mozilla JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[JQuey API](https://api.jquery.com/)
+[moment.js](https://momentjs.com/)
+[Google Fonts](https://fonts.google.com/)
+[Font Awesome](https://fontawesome.com/)
+[Visual Studio Code](https://code.visualstudio.com/)
 
 [Youtube - Moment.js Tutorial]( https://www.youtube.com/watch?v=n80RRNS1k64&list=PLVvjrrRCBy2LWFkR7opQxWp4z0en6OHgw)
+[moment.js introduction]( https://scrimba.com/casts/cwpDGhG)
+[using moment.js](https://youtu.be/9JRvJ9aMLzc)
+[JQuery.each()] (https://api.jquery.com/each/)
+[Looping over array and objects in JavaScript](https://medium.com/chingu/looping-over-arrays-and-objects-in-javascript-57e1188c1ba2)
+[Date Manipulation using JS](https://youtu.be/6c9ZKCs3z8g)
+[Javascript Template Literal](https://youtu.be/NgF9-pdTDGs)
 
 <a name="learned"></a>
 ### 9. What I've Learned
-
+1. There are multiple ways to solve the same issue and the most important thing is to make sure the functionalities work
+2. It takes more practice to keep the codes DRY. 
+3. Think like computer and don't skip small things 
 
 
 <a name="License"></a>
@@ -114,4 +117,4 @@
 <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 <hr>
-August 5, 2020.
+August 22, 2020.
