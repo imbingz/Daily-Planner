@@ -10,7 +10,6 @@
       - [Link to Files](#link-to-files)
     - [5. Screenshots](#5-screenshots)
       - [Screenshots - Mobile View](#screenshots---mobile-view)
-- [<kbd>!screenshot-mobile</kbd>](#kbdimg-srcassetsimagesm1png-altscreenshot-mobilekbd)
       - [Screenshots - Laptop view](#screenshots---laptop-view)
     - [6. Pseudocode - Logic Steps](#6-pseudocode---logic-steps)
     - [7. Installation](#7-installation)
