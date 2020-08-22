@@ -118,6 +118,10 @@ $(document).ready(function() {
 			class: 'saveBtn col-2 col-lg-1',
 			id: workHour.id
 		});
+		
+		buttonEl.on('click', function(){
+			localStorage.setItem(workHour.id, textEl.val());
+		})
 
 		// Create save icons
 		let iconEl = $('<i>').addClass('fa fa-save fa-lg');
@@ -147,14 +151,5 @@ $(document).ready(function() {
 		}
 	});
 
-	/* LOCAL STORAGE --------------------------------------------------------------------------------------------*/
-
-	//Add event listener to buttons and save data to localStorage
-	$('.saveBtn').on('click', function(event) {
-		//Prevent form submission and page reload
-		event.preventDefault();
-		let element = event.currentTarget;
-		let textInput = $('textarea#' + element.id).val();
-		localStorage.setItem(element.id, textInput);
-	});
+	
 });
