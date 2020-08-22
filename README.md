@@ -93,6 +93,7 @@
 [Google Fonts](https://fonts.google.com/)<br>
 [Font Awesome](https://fontawesome.com/)<br>
 [Visual Studio Code](https://code.visualstudio.com/)<br>
+[w3 code validator](https://validator.w3.org/)<br>
 
 [Youtube - Moment.js Tutorial]( https://www.youtube.com/watch?v=n80RRNS1k64&list=PLVvjrrRCBy2LWFkR7opQxWp4z0en6OHgw)<br>
 [moment.js introduction]( https://scrimba.com/casts/cwpDGhG)<br>
