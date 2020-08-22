@@ -1,5 +1,6 @@
 /* 
-Colors: #000000   #ffffff #d3d3d3 #ff6961 #77dd77 #58b4ee #0e8bc4
+Colors: #000000   #ffffff #d3d3d3 #ff6961 #77dd77 
+#58b4ee #6266cb #6f8ff7
 */
 
 body {
@@ -13,17 +14,17 @@ textarea {
 	border: none;
 	resize: none;
 	color: #000000;
-	border-left: 1px solid #0e8bc4;
+	border-left: 1px solid #6266cb;
 	padding: 10px;
 }
 
 .jumbotron {
 	text-align: center;
-	background-image: linear-gradient(to bottom, #58b4ee, #0e8bc4);
+	background-image: linear-gradient(to right, #6266cb, #58b4ee);
 	/* background-color: #58b4ee; */
 	color: #ffffff;
 	border-radius: 0;
-	border-bottom: 10px solid #0e8bc4;
+	/* border-bottom: 10px solid #0e8bc4; */
 }
 
 .description {
@@ -44,7 +45,7 @@ textarea {
 .hour {
 	background-color: #ffffff;
 	color: #000000;
-	border-top: 1px dashed #0e8bc4;
+	border-top: 1px dashed #6266cb;
 	padding-top: 30px;
 }
 
@@ -64,14 +65,28 @@ textarea {
 }
 
 .saveBtn {
-	border: 1px solid #0e8bc4;
+	border: 1px solid #6266cb;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 15px;
-	background-color: #58b4ee;
+	background-color: #6f8ff7;
 	color: white;
 }
 
 .saveBtn i:hover {
 	font-size: 20px;
 	transition: all .3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		margin: 0 5px;
+	}
+
+	.jumbotron h1 {
+		font-size: 1.7rem;
+		font-weight: 600;
+	}
+	.jumbotron p {
+		font-size: 17px;
+	}
 }
