@@ -1,14 +1,4 @@
 $(document).ready(function() {
-	/* ADD CURRENT DATE --------------------------------------------------------------------------------------------*/
-
-	// Use moment.js format and attach/display the date to the header
-	function headerDate() {
-		let m = moment();
-		$('#currentDay').text(m.format('dddd, LL'));
-	}
-
-	headerDate();
-
 	// create an object for each time-block and put them into an array variable to loop through
 
 	let workDay = [
@@ -77,32 +67,26 @@ $(document).ready(function() {
 		}
 	];
 
-	/* SET, GET AND DISPLAY ANY EXISTING DATA IN LOCALSTORAGE --------------------------------------------------------------------------------------------*/
+	/* ADD CURRENT DATE --------------------------------------------------------------------------------------------*/
 
-	function initialize() {
-		//Check if any data existing in localStorage
-		let storedDay = JSON.parse(localStorage.getItem('workDay'));
-
-		if (storedDay) {
-			workDay = storedDay;
-		}
-		//Store existing data to localStorage
-		savePlans();
-
-		//Display existing localStorage data
-		displayPlans();
+	// Use moment.js format and attach/display the date to the header
+	function headerDate() {
+		let m = moment();
+		$('#currentDay').text(m.format('dddd, LL'));
 	}
 
-	/* PLANNER  --------------------------------------------------------------------------------------------*/
+	headerDate();
+
+
+	//First Check if any existing data in localStorage.
+
+
+	
+
+
+	/* PLANNER VISUAL 	--------------------------------------------------------------------------------------------*/
 
 	$.each(workDay, function(index, workHour) {
-		console.log(index, workHour);
-		console.log(workHour.id);
-		console.log(workHour.hour);
-		console.log(workHour.time);
-		console.log(workHour.meridiem);
-		console.log(workHour.plan);
-
 		/* MAIN BODY LAYOUT  --------------------------------------------------------------------------------------------*/
 
 		//For each workHour, create a newRow
@@ -124,13 +108,16 @@ $(document).ready(function() {
 			class: 'col-8 col-lg-10 description',
 			id: workHour.id
 		});
-
-		//Get textarea input
-		workHour.plan = textEl.val().trim();
-		console.log(textEl.val());
+		
+		//Display data from localStorage to textarea
+		textEl.val(localStorage.getItem(workHour.id) || "")
+	
 
 		// Create save buttons
-		let buttonEl = $('<button>').addClass('saveBtn col-2 col-lg-1');
+		let buttonEl = $('<button>').attr({
+			class: 'saveBtn col-2 col-lg-1',
+			id: workHour.id
+		});
 
 		// Create save icons
 		let iconEl = $('<i>').addClass('fa fa-save fa-lg');
@@ -146,12 +133,10 @@ $(document).ready(function() {
 		// check current hour and add .past .present .future classes accordingly to each <textarea>
 
 		let currentHour = parseInt(moment().format('H'));
-		console.log(currentHour);
-
+	
 		plannerHour = parseInt(workHour.time);
 
 		if (plannerHour < currentHour) {
-			console.log(plannerHour);
 			textEl.addClass('past');
 			// Disable input to past hours
 			// textEl.attr('disabled', true);
@@ -162,40 +147,14 @@ $(document).ready(function() {
 		}
 	});
 
-	//Call the initialize func after planner loaded
-	initialize();
+	/* LOCAL STORAGE --------------------------------------------------------------------------------------------*/
 
-	/* SAVE PLAN INPUTS --------------------------------------------------------------------------------------------*/
-
-	// Save plans in localStorage
-	function savePlans() {
-		localStorage.setItem('workDay', JSON.stringify(workDay));
-	}
-
-	//Display plans
-	function displayPlans() {
-		$.each(workDay, function(index, workHour) {
-			$(`#${workHour.id}`).val(`${workHour.plan} `);
-		});
-	}
-
-	//Add event listener to buttons
+	//Add event listener to buttons and save data to localStorage
 	$('.saveBtn').on('click', function(event) {
-		console.log('button clicked');
-
 		//Prevent form submission and page reload
 		event.preventDefault();
-            
-            savePlans();
-		displayPlans();
+		let element = event.currentTarget;
+		let textInput = $('textarea#' + element.id).val();
+		localStorage.setItem(element.id, textInput);
 	});
-
-	// get the textarea input value and save to localStorage
-
-	// set and get data to n from localStorage
-
-	// add saveBtn 'click' event -->
-	//Save data to the local storage;
-	// Set data in localStorage
-	// Display any data in localStorage, if any
 });
