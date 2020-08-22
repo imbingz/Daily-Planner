@@ -55,11 +55,7 @@
 <kbd>![screenshot-mobile](./assets/images/../../Assets/images/05-third-party-apis-homework-demo.gif)</kbd>
 
 #### Screenshots - Mobile View
-<<<<<<< HEAD
 <kbd>![screenshot-mobile](./Assets/images/m1.png)</kbd>
-=======
-<kbd>![screenshot-mobile](./Assets/images/s1.png)</kbd>
->>>>>>> 18d7d55184ae54c95e7e22dc981ed21b1b65de0f
 
 ####  Screenshots - Laptop view 
 <kbd>![screenshot-laptop](./Assets/images/s1.png)</kbd>
