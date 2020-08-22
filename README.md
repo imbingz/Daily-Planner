@@ -83,25 +83,25 @@
 
 <a name="Credits"></a>
 ### 8. Credits:
- The following materials contribute to the completion of this project. 
+ I'd like to thank all the amazing resources avaialbe to make this completion of this project possible. 
 
-[Mozilla HTML5 Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
-[w3 School CSS3](https://www.w3schools.com/css/css_intro.asp)
-[Bootstrap4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
-[Mozilla JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[JQuey API](https://api.jquery.com/)
-[moment.js](https://momentjs.com/)
-[Google Fonts](https://fonts.google.com/)
-[Font Awesome](https://fontawesome.com/)
-[Visual Studio Code](https://code.visualstudio.com/)
+[Mozilla HTML5 Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)<br>
+[w3 School CSS3](https://www.w3schools.com/css/css_intro.asp)<br>
+[Bootstrap4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)<br>
+[Mozilla JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)<br>
+[JQuey API](https://api.jquery.com/)<br>
+[moment.js](https://momentjs.com/)<br>
+[Google Fonts](https://fonts.google.com/)<br>
+[Font Awesome](https://fontawesome.com/)<br>
+[Visual Studio Code](https://code.visualstudio.com/)<br>
 
-[Youtube - Moment.js Tutorial]( https://www.youtube.com/watch?v=n80RRNS1k64&list=PLVvjrrRCBy2LWFkR7opQxWp4z0en6OHgw)
-[moment.js introduction]( https://scrimba.com/casts/cwpDGhG)
-[using moment.js](https://youtu.be/9JRvJ9aMLzc)
-[JQuery.each()] (https://api.jquery.com/each/)
-[Looping over array and objects in JavaScript](https://medium.com/chingu/looping-over-arrays-and-objects-in-javascript-57e1188c1ba2)
-[Date Manipulation using JS](https://youtu.be/6c9ZKCs3z8g)
-[Javascript Template Literal](https://youtu.be/NgF9-pdTDGs)
+[Youtube - Moment.js Tutorial]( https://www.youtube.com/watch?v=n80RRNS1k64&list=PLVvjrrRCBy2LWFkR7opQxWp4z0en6OHgw)<br>
+[moment.js introduction]( https://scrimba.com/casts/cwpDGhG)<br>
+[using moment.js](https://youtu.be/9JRvJ9aMLzc)<br>
+[JQuery.each()] (https://api.jquery.com/each/)<br>
+[Looping over array and objects in JavaScript](https://medium.com/chingu/looping-over-arrays-and-objects-in-javascript-57e1188c1ba2)<br>
+[Date Manipulation using JS](https://youtu.be/6c9ZKCs3z8g)<br>
+[Javascript Template Literal](https://youtu.be/NgF9-pdTDGs)<br>
 
 <a name="learned"></a>
 ### 9. What I've Learned
