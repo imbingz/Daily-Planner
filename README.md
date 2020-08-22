@@ -10,6 +10,7 @@
       - [Link to Files](#link-to-files)
     - [5. Screenshots](#5-screenshots)
       - [Screenshots - Mobile View](#screenshots---mobile-view)
+- [<kbd>!screenshot-mobile</kbd>](#kbdimg-srcassetsimagesm1png-altscreenshot-mobilekbd)
       - [Screenshots - Laptop view](#screenshots---laptop-view)
     - [6. Pseudocode - Logic Steps](#6-pseudocode---logic-steps)
     - [7. Installation](#7-installation)
@@ -54,7 +55,11 @@
 <kbd>![screenshot-mobile](./assets/images/../../Assets/images/05-third-party-apis-homework-demo.gif)</kbd>
 
 #### Screenshots - Mobile View
+<<<<<<< HEAD
 <kbd>![screenshot-mobile](./Assets/images/m1.png)</kbd>
+=======
+<kbd>![screenshot-mobile](./Assets/images/s1.png)</kbd>
+>>>>>>> 18d7d55184ae54c95e7e22dc981ed21b1b65de0f
 
 ####  Screenshots - Laptop view 
 <kbd>![screenshot-laptop](./Assets/images/s1.png)</kbd>
