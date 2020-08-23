@@ -1,6 +1,6 @@
 /* 
-Colors: #000000   #ffffff #a7f8b7 #fad07c
- #6266cb #6f8ff7 #9fa3e3 #d0d2fc
+Colors: #555555  #ffffff #a7f8b7 #fad07c
+ #778bfd #4c4ff8 #9fa3e3 #d0d2fc
 */
 
 body {
@@ -13,14 +13,14 @@ textarea {
 	background: transparent;
 	border: none;
 	resize: none;
-	color: #000000;
+	color: #555555;
 	border-left: 1px solid #9fa3e3;
 	padding: 10px;
 }
 
 .jumbotron {
 	text-align: center;
-	background-image: linear-gradient(to right, #6266cb, #58b4ee);
+	background-image: linear-gradient(to right, #4c4ff8, #9fa3e3);
 	/* background-color: #58b4ee; */
 	color: #ffffff;
 	border-radius: 0;
@@ -44,8 +44,8 @@ textarea {
 
 .hour {
 	background-color: #ffffff;
-	color: #000000;
-	border-top: 1px dashed #6266cb;
+	columns: #555555;
+	border-top: 1px dashed #4c4ff8;
 	padding-top: 30px;
 }
 
@@ -65,10 +65,10 @@ textarea {
 }
 
 .saveBtn {
-	border: 1px solid #6266cb;
+	border: 1px solid #4c4ff8;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 15px;
-	background-color: #6f8ff7;
+	background-color: #778bfd;
 	color: white;
 }
 
