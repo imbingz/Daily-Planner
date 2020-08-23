@@ -1,6 +1,6 @@
 /* 
-Colors: #000000   #ffffff #d3d3d3 #ff6961 #77dd77 
-#58b4ee #6266cb #6f8ff7
+Colors: #000000   #ffffff #a7f8b7 #fad07c
+ #6266cb #6f8ff7 #9fa3e3 #d0d2fc
 */
 
 body {
@@ -14,7 +14,7 @@ textarea {
 	border: none;
 	resize: none;
 	color: #000000;
-	border-left: 1px solid #6266cb;
+	border-left: 1px solid #9fa3e3;
 	padding: 10px;
 }
 
@@ -50,17 +50,17 @@ textarea {
 }
 
 .past {
-	background-color: #d3d3d3;
+	background-color: #d0d2fc;
 	color: black;
 }
 
 .present {
-	background-color: #ff6961;
+	background-color: #fad07c;
 	color: black;
 }
 
 .future {
-	background-color: #77dd77;
+	background-color: #a7f8b7;
 	color: black;
 }
 
