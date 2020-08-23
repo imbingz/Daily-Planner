@@ -77,13 +77,6 @@ $(document).ready(function() {
 
 	headerDate();
 
-
-	//First Check if any existing data in localStorage.
-
-
-	
-
-
 	/* PLANNER VISUAL 	--------------------------------------------------------------------------------------------*/
 
 	$.each(workDay, function(index, workHour) {
@@ -108,20 +101,19 @@ $(document).ready(function() {
 			class: 'col-8 col-lg-10 description',
 			id: workHour.id
 		});
-		
+
 		//Display data from localStorage to textarea
-		textEl.val(localStorage.getItem(workHour.id) || "")
-	
+		textEl.val(localStorage.getItem(workHour.id) || '');
 
 		// Create save buttons
 		let buttonEl = $('<button>').attr({
 			class: 'saveBtn col-2 col-lg-1',
 			id: workHour.id
 		});
-		
-		buttonEl.on('click', function(){
+
+		buttonEl.on('click', function() {
 			localStorage.setItem(workHour.id, textEl.val());
-		})
+		});
 
 		// Create save icons
 		let iconEl = $('<i>').addClass('fa fa-save fa-lg');
@@ -137,7 +129,7 @@ $(document).ready(function() {
 		// check current hour and add .past .present .future classes accordingly to each <textarea>
 
 		let currentHour = parseInt(moment().format('H'));
-	
+
 		plannerHour = parseInt(workHour.time);
 
 		if (plannerHour < currentHour) {
@@ -150,6 +142,4 @@ $(document).ready(function() {
 			textEl.addClass('future');
 		}
 	});
-
-	
 });
