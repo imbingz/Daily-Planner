@@ -6,64 +6,55 @@ $(document).ready(function() {
 			id: '0',
 			hour: '09',
 			time: '9',
-			meridiem: 'AM',
-			plan: ''
+			meridiem: 'AM'
 		},
 		{
 			id: '1',
 			hour: '10',
 			time: '10',
-			meridiem: 'AM',
-			plan: ''
+			meridiem: 'AM'
 		},
 		{
 			id: '2',
 			hour: '11',
 			time: '11',
-			meridiem: 'AM',
-			plan: ''
+			meridiem: 'AM'
 		},
 		{
 			id: '3',
 			hour: '12',
 			time: '12',
-			meridiem: 'PM',
-			plan: ''
+			meridiem: 'PM'
 		},
 		{
 			id: '4',
 			hour: '01',
 			time: '13',
-			meridiem: 'PM',
-			plan: ''
+			meridiem: 'PM'
 		},
 		{
 			id: '5',
 			hour: '02',
 			time: '14',
-			meridiem: 'PM',
-			plan: ''
+			meridiem: 'PM'
 		},
 		{
 			id: '6',
 			hour: '03',
 			time: '15',
-			meridiem: 'PM',
-			plan: ''
+			meridiem: 'PM'
 		},
 		{
 			id: '7',
 			hour: '04',
 			time: '16',
-			meridiem: 'PM',
-			plan: ''
+			meridiem: 'PM'
 		},
 		{
 			id: '8',
 			hour: '05',
 			time: '17',
-			meridiem: 'PM',
-			plan: ''
+			meridiem: 'PM'
 		}
 	];
 
